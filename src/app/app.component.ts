@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'MyStore';
+  private title = 'MyStore';
+  private name = 'Max';
+  private age = 30;
+  get getTitle() {
+    return this.title;
+  }
+  get getName() {
+    return this.name;
+  }
+  get getAge() {
+    return this.age;
+  }
 }
