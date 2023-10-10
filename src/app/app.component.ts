@@ -10,6 +10,10 @@ export class AppComponent {
   private name = 'Max';
   private age = 30;
   private isDisabled = true;
+  private names: string[] = [];
+  get getNames() {
+    return this.names;
+  }
   get getTitle() {
     return this.title;
   }
@@ -34,5 +38,12 @@ export class AppComponent {
   onScroll(event: Event) {
     const Evento = event.target as HTMLElement;
     console.log(Evento.scrollTop);
+  }
+  addName() {
+    this.names.push(this.name);
+    this.name = '';
+  }
+  removeName(index: number) {
+    this.names.splice(index, 1);
   }
 }

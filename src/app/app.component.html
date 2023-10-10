@@ -1,10 +1,23 @@
 <h1>DATA BINDING</h1>
+<h2>NgIf</h2>
 <input #nameInput="ngModel" type="text" [(ngModel)]="setName" required>
 <p>{{nameInput.valid}}</p>
 <input #ageInput="ngModel" type="number" [(ngModel)]="setAge" required min="18" max="31">
 <p>{{ageInput.valid}}</p>
 <p *ngIf="!ageInput.valid; else elseBlock ">edad invalida</p>
 <ng-template #elseBlock>soy el elseblock por tal soy valido</ng-template>
+<hr>
+<h1>NgFor</h1>
+<div>
+  <input type="text" placeholder="insert name" [(ngModel)]="setName" [value]="getName">
+  <button (click)="addName()">Add name</button>
+  <li *ngFor="let name of getNames; index as i">
+    {{i+1}} - {{name}}
+    <button (click)="removeName(i)">delete name</button>
+  </li>
+</div>
+
+<hr>
 
 <h1>propertie binding</h1>
 <div>
@@ -15,7 +28,7 @@
 <div>
   <progress max="100" [value]="getAge"></progress>
 </div>
-<br>
+<hr>
 
 <h1>string interpolation</h1>
 <div>
@@ -25,7 +38,7 @@
   <p>soy {{getName}} y tengo {{getAge}}</p>
 </div>
 
-<br>
+<hr>
 <div>
   <h3> Event binding for scrolling</h3>
   <div class="lorem" (scroll)="onScroll($event)">
