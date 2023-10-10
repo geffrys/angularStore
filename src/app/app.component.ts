@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,18 @@ export class AppComponent {
   private age = 30;
   private isDisabled = true;
   private names: string[] = [];
+  private products: Product[] = [
+    {
+      name: 'Camisa',
+      price: 15.99,
+      image: 'assets/images/camisa.jpg'
+    },
+    {
+      name: 'Pantalon',
+      price: 19.99,
+      image: 'assets/images/pantalon.jpg'
+    }
+  ]
   get getNames() {
     return this.names;
   }
