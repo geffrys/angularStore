@@ -25,4 +25,8 @@ export class AppComponent {
   changeName() {
     this.name = 'Ana';
   }
+  onScroll(event: Event) {
+    const Evento = event.target as HTMLElement;
+    console.log(Evento.scrollTop);
+  }
 }
