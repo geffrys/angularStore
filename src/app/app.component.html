@@ -1,9 +1,17 @@
+<h1>DATA BINDING</h1>
+<input #nameInput="ngModel" type="text" [(ngModel)]="setName" required>
+<p>{{nameInput.valid}}</p>
+<input #ageInput="ngModel" type="number" [(ngModel)]="setAge" required min="18" max="31">
+<p>{{ageInput.valid}}</p>
+<p *ngIf="!ageInput.valid; else elseBlock ">edad invalida</p>
+<ng-template #elseBlock>soy el elseblock por tal soy valido</ng-template>
 
 <h1>propertie binding</h1>
 <div>
   <button [disabled]="getIsDisabled">Boton</button>
   <input type="text" [value]="getName">
 </div>
+
 <div>
   <progress max="100" [value]="getAge"></progress>
 </div>

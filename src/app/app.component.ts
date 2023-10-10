@@ -22,6 +22,12 @@ export class AppComponent {
   get getIsDisabled() {
     return this.isDisabled;
   }
+  set setName(name: string) {
+    this.name = name;
+  }
+  set setAge(age: number) {
+    this.age = age;
+  }
   changeName() {
     this.name = 'Ana';
   }
