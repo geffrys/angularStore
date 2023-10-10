@@ -9,6 +9,7 @@ export class AppComponent {
   private title = 'MyStore';
   private name = 'Max';
   private age = 30;
+  private isDisabled = true;
   get getTitle() {
     return this.title;
   }
@@ -17,5 +18,8 @@ export class AppComponent {
   }
   get getAge() {
     return this.age;
+  }
+  get getIsDisabled() {
+    return this.isDisabled;
   }
 }

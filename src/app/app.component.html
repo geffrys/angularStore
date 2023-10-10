@@ -1,6 +1,19 @@
+
+<h1>propertie binding</h1>
 <div>
-  <h1>
+  <button [disabled]="getIsDisabled">Boton</button>
+  <input type="text" [value]="getName">
+</div>
+<div>
+  <progress max="100" [value]="getAge"></progress>
+</div>
+
+<br>
+
+<h1>string interpolation</h1>
+<div>
+  <h2>
     {{getTitle}}
-  </h1>
+  </h2>
   <p>soy {{getName}} y tengo {{getAge}}</p>
 </div>
