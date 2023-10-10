@@ -22,4 +22,7 @@ export class AppComponent {
   get getIsDisabled() {
     return this.isDisabled;
   }
+  changeName() {
+    this.name = 'Ana';
+  }
 }
